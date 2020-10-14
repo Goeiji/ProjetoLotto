@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Just Lotte</string>
+    <string name="btn_text">Sorteio</string>
+    <string name="title01">Faça seu jogo:</string>
+    <string name="title02">Extração:</string>
+    <string name="title03">Resultado:</string>
+    <string name="logo_desc">Imagem Logo do App</string>
+    <string name="default_number">0</string>
+    <string name="default_result">X acertos</string>
+    <string name="error_message">Preencha todos os números!</string>
+</resources>

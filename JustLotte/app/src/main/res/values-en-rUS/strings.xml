@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Just Lotte</string>
+    <string name="btn_text">Raffle</string>
+    <string name="title02">Extraction:</string>
+    <string name="title01">Make your game:</string>
+    <string name="logo_desc">App logo image</string>
+    <string name="title03">Result:</string>
+    <string name="default_number">0</string>
+    <string name="default_result">X hits</string>
+    <string name="error_message">Fill in all the numbers!</string>
+</resources>
