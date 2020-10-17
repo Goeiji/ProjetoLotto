@@ -48,14 +48,16 @@ public class MainActivity extends AppCompatActivity {
         String value4 = input4.getText().toString();
         String value5 = input5.getText().toString();
 
-        Integer choose1 = Integer.parseInt(value1);
-        Integer choose2 = Integer.parseInt(value2);
-        Integer choose3 = Integer.parseInt(value3);
-        Integer choose4 = Integer.parseInt(value4);
-        Integer choose5 = Integer.parseInt(value5);
-
-        /* if(choose1 == 0 || choose2 == 0 || choose3 == 0 || choose4 == 0 || choose5 == 0) {
+        if(value1.equals("") || value2.equals("") || value3.equals("") || value4.equals("") || value5.equals("")) {
             Toast.makeText(this, R.string.error_message, Toast.LENGTH_LONG).show();
-        } */
+        } else {
+            int choose1 = Integer.parseInt(value1);
+            int choose2 = Integer.parseInt(value2);
+            int choose3 = Integer.parseInt(value3);
+            int choose4 = Integer.parseInt(value4);
+            int choose5 = Integer.parseInt(value5);
+
+            // Continuar logica aqui
+        }
     }
 }
