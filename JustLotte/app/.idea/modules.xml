@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Just Lotte-app.iml" filepath="$PROJECT_DIR$/.idea/modules/Just Lotte-app.iml" group="Just Lotte/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2099148127/JustLotte-Just_Lotte.iml" filepath="$PROJECT_DIR$/.idea/modules/2099148127/JustLotte-Just_Lotte.iml" group="Just_Lotte" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1302947483/Just_Lotte.iml" filepath="$PROJECT_DIR$/.idea/modules/-1302947483/Just_Lotte.iml" group="Just_Lotte" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="Just Lotte/app" />
     </modules>

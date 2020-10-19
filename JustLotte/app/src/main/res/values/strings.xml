@@ -9,4 +9,6 @@
     <string name="default_number">0</string>
     <string name="default_result">X</string>
     <string name="error_message">Preencha todos os números!</string>
+    <string name="invalid_numbers">Os números precisam estar entre 1 e 50!</string>
+    <string name="repeated_numbers">Os números não podem ser repetidos!</string>
 </resources>
