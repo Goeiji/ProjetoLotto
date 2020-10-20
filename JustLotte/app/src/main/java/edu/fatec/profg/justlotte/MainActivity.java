@@ -7,6 +7,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView winImage;
     private MediaPlayer mp;
+    private MediaPlayer mp2;
+    private MediaPlayer mp3;
 
     private int countHits;
 
@@ -88,9 +92,23 @@ public class MainActivity extends AppCompatActivity {
         winImage = findViewById(R.id.win_image);
         // Cria o Media Player para tocar o som ao acertar todos os números
         mp = MediaPlayer.create(this, R.raw.win_sound);
+        mp2 = MediaPlayer.create(this, R.raw.hollow);
+        mp3 = MediaPlayer.create(this, R.raw.error);
 
         countHits = 0;
     }
+
+    //Animações
+    public void ball_animation(TextView result){
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.ball_anim);
+        result.startAnimation(animation);
+    }
+
+    public void fadein_animation(TextView eTitle){
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.fadein_anim);
+        eTitle.startAnimation(animation);
+    }
+
 
     public List<Integer> generateSortedNumbers() {
         List<Integer> list = new ArrayList<Integer>();
@@ -135,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
                         TextView result = results.get(index);
                         result.setText("" + numbers.get(index));
                         result.setVisibility(View.VISIBLE);
+                        mp2.start();
+                        ball_animation(result);
                         showNumbers(choices, numbers, index + 1);
                         return;
                     }
@@ -211,6 +231,8 @@ public class MainActivity extends AppCompatActivity {
                 new Runnable() {
                     public void run() {
                         extractionTitle.setVisibility(View.VISIBLE);
+                        TextView eTitle = extractionTitle;
+                        fadein_animation(eTitle);
                     }
                 }, 2000);
 
@@ -233,16 +255,24 @@ public class MainActivity extends AppCompatActivity {
 
                         // Atribui a quantidade de acertos ao TextView e verifica se foram acertados todos os números
                         totalResults.setText("" + countHits);
-                        if(countHits == 1) {
+                        if(countHits < 5) {
                             hitText.setText(R.string.title04_singular);
+                            mp3.start(); // Tocar áudio de lose
                         } else if (countHits == 5) {
                             winImage.setVisibility(View.VISIBLE); // Mostrar imagem de win
                             mp.start(); // Tocar áudio de win
                         }
 
                         resultTitle.setVisibility(View.VISIBLE);
+                        TextView rTitle = resultTitle;
                         totalResults.setVisibility(View.VISIBLE);
+                        TextView tResults = totalResults;
                         hitText.setVisibility(View.VISIBLE);
+                        TextView hText = hitText;
+
+                        fadein_animation(rTitle);
+                        fadein_animation(tResults);
+                        fadein_animation(hText);
                     }
                 }, 12000); // esperando mostrar todas as bolas
     }
