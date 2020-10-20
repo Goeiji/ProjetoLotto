@@ -12,7 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:background="@drawable/logo"
         android:contentDescription="@string/logo_desc"
         android:scaleType="center"
         android:src="@drawable/logo"
@@ -35,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_app"
-        app:layout_constraintBottom_toTopOf="@id/choose_03"/>
+        app:layout_constraintBottom_toTopOf="@id/choose_03" />
 
     <EditText
         android:id="@+id/choose_01"
@@ -43,25 +42,23 @@
         android:layout_height="45dp"
         android:layout_marginTop="25dp"
         android:autofillHints=""
-        android:background="@drawable/ellipse1"
+        android:background="@drawable/ellipse2"
         android:ems="10"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:hint="@string/default_number"
         android:inputType="number"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorMaster"
+        android:textColorHint="@color/colorMaster"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/choose_02"
-        app:layout_constraintTop_toBottomOf="@+id/title_01"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/title_01" />
 
     <EditText
         android:id="@+id/choose_02"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="25dp"
-
         android:autofillHints=""
         android:background="@drawable/ellipse2"
         android:ems="10"
@@ -81,19 +78,18 @@
         android:layout_height="45dp"
         android:layout_marginTop="25dp"
         android:autofillHints=""
-        android:background="@drawable/ellipse1"
+        android:background="@drawable/ellipse2"
         android:ems="10"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:hint="@string/default_number"
         android:inputType="number"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorMaster"
+        android:textColorHint="@color/colorMaster"
         app:layout_constraintStart_toEndOf="@id/choose_02"
         app:layout_constraintEnd_toStartOf="@id/choose_04"
         app:layout_constraintTop_toBottomOf="@+id/title_01"
-        app:layout_constraintBottom_toTopOf="@id/btn_sort"
-        />
+        app:layout_constraintBottom_toTopOf="@id/btn_sort" />
 
     <EditText
         android:id="@+id/choose_04"
@@ -119,14 +115,14 @@
         android:layout_height="45dp"
         android:layout_marginTop="25dp"
         android:autofillHints=""
-        android:background="@drawable/ellipse1"
+        android:background="@drawable/ellipse2"
         android:ems="10"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:hint="@string/default_number"
         android:inputType="number"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorMaster"
+        android:textColorHint="@color/colorMaster"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/choose_04"
         app:layout_constraintTop_toBottomOf="@+id/title_01" />
@@ -146,8 +142,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose_03"
-        app:layout_constraintBottom_toTopOf="@id/title_02"
-        />
+        app:layout_constraintBottom_toTopOf="@id/title_02" />
+
+    <ImageView
+        android:id="@+id/win_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/win_desc"
+        android:elevation="2dp"
+        android:onClick="closeImage"
+        android:scaleType="center"
+        android:src="@drawable/logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title_02"
@@ -172,13 +182,13 @@
         android:layout_height="45dp"
         android:layout_marginTop="25dp"
         android:autofillHints=""
-        android:background="@drawable/ellipse1"
+        android:background="@drawable/ellipse2"
         android:ems="10"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:text="@string/default_number"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorMaster"
+        android:textColorHint="@color/colorMaster"
         android:textSize="18sp"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
@@ -210,19 +220,18 @@
         android:layout_height="45dp"
         android:layout_marginTop="25dp"
         android:autofillHints=""
-        android:background="@drawable/ellipse1"
+        android:background="@drawable/ellipse2"
         android:ems="10"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:text="@string/default_number"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorMaster"
+        android:textColorHint="@color/colorMaster"
         android:textSize="18sp"
         android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/extraction_02"
         app:layout_constraintEnd_toStartOf="@id/extraction_04"
-        app:layout_constraintTop_toBottomOf="@+id/title_02"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/title_02" />
 
     <TextView
         android:id="@+id/extraction_04"
@@ -249,13 +258,13 @@
         android:layout_height="45dp"
         android:layout_marginTop="25dp"
         android:autofillHints=""
-        android:background="@drawable/ellipse1"
+        android:background="@drawable/ellipse2"
         android:ems="10"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:text="@string/default_number"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorMaster"
+        android:textColorHint="@color/colorMaster"
         android:textSize="18sp"
         android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/extraction_04"
@@ -276,8 +285,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/extraction_03"
-        app:layout_constraintBottom_toTopOf="@id/text_result"
-        />
+        app:layout_constraintBottom_toTopOf="@id/text_result" />
 
     <TextView
         android:id="@+id/text_result"
@@ -291,8 +299,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_03"
-        app:layout_constraintBottom_toTopOf="@id/title_04"
-        />
+        app:layout_constraintBottom_toTopOf="@id/title_04" />
 
     <TextView
         android:id="@+id/title_04"
@@ -308,7 +315,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_result"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
