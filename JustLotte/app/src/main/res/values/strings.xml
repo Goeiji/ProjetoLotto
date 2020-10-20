@@ -5,10 +5,13 @@
     <string name="title02">Extração</string>
     <string name="title03">Resultado</string>
     <string name="title04">Acertos</string>
+    <string name="title04_singular">Acerto</string>
     <string name="logo_desc">Imagem Logo do App</string>
     <string name="default_number">0</string>
     <string name="default_result">X</string>
     <string name="error_message">Preencha todos os números!</string>
     <string name="invalid_numbers">Os números precisam estar entre 1 e 50!</string>
     <string name="repeated_numbers">Os números não podem ser repetidos!</string>
+    <string name="btn_text2">Reset</string>
+    <string name="win_desc">Imagem mostrada ao acertar todos os números</string>
 </resources>
