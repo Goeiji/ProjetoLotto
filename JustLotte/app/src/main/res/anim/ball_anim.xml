@@ -5,9 +5,9 @@
         android:pivotY="50%"
         android:toDegrees="720"
         android:fromDegrees="0"
-        android:duration="800"/>
+        android:duration="800" />
     <alpha
         android:fromAlpha="0.1"
         android:toAlpha="1.0"
-        android:duration="800"/>
+        android:duration="800" />
 </set>

@@ -98,12 +98,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Animações
-    public void ball_animation(TextView result){
+    public void ball_animation(TextView result) {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.ball_anim);
         result.startAnimation(animation);
     }
 
-    public void fadein_animation(TextView eTitle){
+    public void fadein_animation(TextView eTitle) {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.fadein_anim);
         eTitle.startAnimation(animation);
     }
@@ -111,11 +111,9 @@ public class MainActivity extends AppCompatActivity {
 
     public List<Integer> generateSortedNumbers() {
         List<Integer> list = new ArrayList<Integer>();
-        for(int i = 0; i < 5;)
-        {
-            int rand = ((int)(Math.random() * 50)) + 1;
-            if(!list.contains(rand))
-            {
+        for (int i = 0; i < 5; ) {
+            int rand = ((int) (Math.random() * 50)) + 1;
+            if (!list.contains(rand)) {
                 list.add(rand);
                 i++;
             }
@@ -129,33 +127,33 @@ public class MainActivity extends AppCompatActivity {
     public void showNumbers(final List<Integer> choices, final List<Integer> numbers, final int index) {
         if (index < numbers.size()) {
             new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        for (int i = 0; i < choices.size(); i++) {
-                            if(choices.get(i) == numbers.get(index)) {
-                                TextView result = results.get(index);
-                                result.setBackgroundResource(R.drawable.ellipse1);
-                                result.setTextColor(getResources().getColor(R.color.colorWhite));
-                                result.setHintTextColor(getResources().getColor(R.color.colorWhite));
+                    new Runnable() {
+                        public void run() {
+                            for (int i = 0; i < choices.size(); i++) {
+                                if (choices.get(i) == numbers.get(index)) {
+                                    TextView result = results.get(index);
+                                    result.setBackgroundResource(R.drawable.ellipse1);
+                                    result.setTextColor(getResources().getColor(R.color.colorWhite));
+                                    result.setHintTextColor(getResources().getColor(R.color.colorWhite));
 
-                                EditText input = inputs.get(i);
-                                input.setBackgroundResource(R.drawable.ellipse1);
-                                input.setTextColor(getResources().getColor(R.color.colorWhite));
-                                input.setHintTextColor(getResources().getColor(R.color.colorWhite));
+                                    EditText input = inputs.get(i);
+                                    input.setBackgroundResource(R.drawable.ellipse1);
+                                    input.setTextColor(getResources().getColor(R.color.colorWhite));
+                                    input.setHintTextColor(getResources().getColor(R.color.colorWhite));
 
-                                countHits++; // Contabiliza a quantidade de acertos
+                                    countHits++; // Contabiliza a quantidade de acertos
+                                }
                             }
-                        }
 
-                        TextView result = results.get(index);
-                        result.setText("" + numbers.get(index));
-                        result.setVisibility(View.VISIBLE);
-                        mp2.start();
-                        ball_animation(result);
-                        showNumbers(choices, numbers, index + 1);
-                        return;
-                    }
-                }, 2000);
+                            TextView result = results.get(index);
+                            result.setText("" + numbers.get(index));
+                            result.setVisibility(View.VISIBLE);
+                            mp2.start();
+                            ball_animation(result);
+                            showNumbers(choices, numbers, index + 1);
+                            return;
+                        }
+                    }, 2000);
         }
     }
 

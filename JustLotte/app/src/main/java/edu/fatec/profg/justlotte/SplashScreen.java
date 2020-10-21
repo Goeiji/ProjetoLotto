@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        topAnim = AnimationUtils.loadAnimation(this,R.anim.from_top);
+        topAnim = AnimationUtils.loadAnimation(this, R.anim.from_top);
 
         image = findViewById(R.id.splash);
 
@@ -32,6 +32,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(getBaseContext(), MainActivity.class));
                 finish();
             }
-        },3000);
+        }, 3000);
     }
 }
