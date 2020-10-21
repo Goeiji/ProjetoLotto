@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -128,8 +127,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showNumbers(final List<Integer> choices, final List<Integer> numbers, final int index) {
-        int numbersSize = numbers.size();
-        Log.d("tag", "tamanho " + numbersSize);
         if (index < numbers.size()) {
             new android.os.Handler().postDelayed(
                 new Runnable() {
@@ -255,9 +252,11 @@ public class MainActivity extends AppCompatActivity {
 
                         // Atribui a quantidade de acertos ao TextView e verifica se foram acertados todos os números
                         totalResults.setText("" + countHits);
-                        if(countHits < 5) {
-                            hitText.setText(R.string.title04_singular);
+                        if (countHits < 5) {
                             mp3.start(); // Tocar áudio de lose
+                            if (countHits == 1) {
+                                hitText.setText(R.string.title04_singular); // Alterar texto para o singular
+                            }
                         } else if (countHits == 5) {
                             winImage.setVisibility(View.VISIBLE); // Mostrar imagem de win
                             mp.start(); // Tocar áudio de win

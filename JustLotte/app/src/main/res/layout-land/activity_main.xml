@@ -138,9 +138,10 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/logo_desc"
         android:scaleType="center"
-        android:src="@drawable/logo"
+        android:src="@drawable/youlotte"
         android:visibility="gone"
         android:elevation="2dp"
+        android:onClick="closeImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -285,9 +286,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/title_04"
-        app:layout_constraintTop_toBottomOf="@id/title_03"
-
-        />
+        app:layout_constraintTop_toBottomOf="@id/title_03" />
 
     <TextView
         android:id="@+id/title_04"
@@ -302,7 +301,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_result"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
